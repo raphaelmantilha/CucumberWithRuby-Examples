@@ -15,14 +15,11 @@ Dado("que possuo itens no meu carrinho") do
  #Para pegar o primeiro
  #   produtos[0].find('a').click
  #Selecionando produto aleatoriamente
-     produtos.sample.find('a').click
- sleep 5
-    
+     produtos.sample.find('a').click    
 end
  
 Dado("eu já fechei o meu pedido") do
    find('a[href="/order"]').click
-   sleep 5
 end
   
 Quando("eu finalizo o pedido com {string}") do |forma_pagamento|
@@ -37,8 +34,6 @@ Quando("eu finalizo o pedido com {string}") do |forma_pagamento|
    linha.find('label div').click
 
    click_button 'Concluir Pedido'
-   sleep 5
-
 end
   
 Então("meu pedido é concluído com a mensagem:") do |mensagem_final|
